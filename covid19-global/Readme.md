@@ -1,10 +1,6 @@
 # Dashboard Covid-19
 This dashboard shows data about Covid-19 using the daily report published by [European Centre for Disease Prevention and Control (ECDC)](https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide).
  
- It shows worlwide information and it allows to select a country to view its details.
-
- ## Data Source
- The source data is the daily report published by [European Centre for Disease Prevention and Control (ECDC)](https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide).
 ## Data Source
 The dashboard uses SQL Server as Data Source.
 In folder `SQL` you'll find the scirpt `create-db.sql` to create the DB `covid_data` and the table `daily_global`.
@@ -37,3 +33,11 @@ dotnet bin/Release/netcoreapp3.1/publish/DataFiller.dll sql [SQL_HOST] [SQL_PORT
 # EXAMPLE:
 dotnet bin/Release/netcoreapp3.1/publish/DataFiller.dll sql localhost 1433 SA SQLserver2020 
 ```
+
+## Screenshots
+### Global data
+![](doc/images/screen1.png)
+### Global cases and deaths 
+![](doc/images/screen2.png)
+### Country cases and deaths
+![](doc/images/screen3.png)
