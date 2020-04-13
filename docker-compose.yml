@@ -1,0 +1,16 @@
+version: '3.2'
+services:
+  grafana:
+    image: grafana/grafana:6.7.1
+    user: "472"
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_INSTALL_PLUGINS=grafana-piechart-panel, grafana-worldmap-panel
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=SQLserver2020
+    ports:
+      - "1433:1433"
