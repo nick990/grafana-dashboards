@@ -118,7 +118,7 @@ namespace DataFiller
                     ConvertCsvToSqlCsv(csvInputFilePath,csvOutputFilePath);                
                 break;
             }
-            //File.Delete(csvInputFilePath);           
+            File.Delete(csvInputFilePath);           
         }
     }
 }
