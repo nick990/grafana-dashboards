@@ -36,7 +36,7 @@ CREATE TABLE covid_data.dbo.pcm_dpc_regions (
 	deaths int NULL,
 	totalPositiveCases int NULL,
 	testsPerformed int NULL,
-	CONSTRAINT pcm_dpc_regions_PK PRIMARY KEY (ts,regionCode)
+	CONSTRAINT pcm_dpc_regions_PK PRIMARY KEY (ts,regionCode,regionName)
 );
 GO
 
