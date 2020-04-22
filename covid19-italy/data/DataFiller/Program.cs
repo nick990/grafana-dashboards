@@ -146,26 +146,16 @@ namespace DataFiller
 
 
         static void Main(string[] args)
-        {   
-            
-            String command = args[0];
-            switch(command){
-                case "sql":
-                    String sqlServer = args[1];
-                    String sqlPort = args[2];
-                    String sqlUser = args[3];
-                    String sqlPassword = args[4];
-                    var conn = GetSQLConnection(sqlServer, sqlPort, sqlUser, sqlPassword);
-                    conn.Open();                    
-                    InsertFromDpcItalyCsv(conn);
-                    InsertFromDpcRegionsCsv(conn);
-                    InsertFromDpcProvincesCsv(conn);
-                    conn.Close();
-                break;
-                case "csv":
-                    string csvOutputFilePath = args[1];         
-                break;
-            }
+        {      
+            String sqlServer = args[0];
+            String sqlPort = args[1];
+            String sqlUser = args[2];
+            String sqlPassword = args[3];
+            var conn = GetSQLConnection(sqlServer, sqlPort, sqlUser, sqlPassword);
+            conn.Open();                    
+            InsertFromDpcItalyCsv(conn);
+            InsertFromDpcRegionsCsv(conn);
+            InsertFromDpcProvincesCsv(conn); 
         }
     }
 }
